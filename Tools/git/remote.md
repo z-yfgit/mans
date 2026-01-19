@@ -10,7 +10,10 @@ git remote remove <name>
 git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
 git remote set-branches [--add] <name> <branch>...
 git remote get-url [--push] [--all] <name>
+
+修改远程仓库的URL
 git remote set-url [--push] <name> <newurl> [<oldurl>]
+
 git remote set-url --add [--push] <name> <newurl>
 git remote set-url --delete [--push] <name> <url>
 git remote [-v | --verbose] show [-n] <name>...
@@ -31,4 +34,7 @@ git remote rename upstream upstream1
 
 # 删除远程仓库
 git remote remove upstream1
+
+# 修改远程仓库的URL
+git remote set-url origin https://github.com/engild/mans.git
 ```

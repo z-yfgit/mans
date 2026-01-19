@@ -1,21 +1,20 @@
 ## groupmod命令&
-
-用于修改组
+说明：修改用户组
 
 ### 用法
 ```
 groupmod [options] GROUP
 ```
 
-| 选项                       | 说明                |
-| -------------------------- | ------------------- |
-| -g, --gid \<GID>            | 修改组ID为GID       |
-| -n, --new-name \<NEW_GROUP> | 修改组名为NEW_GROUP |
-| -o, --non-unique           | 允许使用重复的 GID  |
+| 选项 | 说明
+| --- | ---
+| -g, --gid \<GID>              | 修改组ID
+| -n, --new-name \<NEW_GROUP>   | 修改组名
+| -o, --non-unique              | 允许使用重复的 GID
 
 ### 示例
 
-```shell
+```sh
 # 将组ID为500的修改成组ID为1500
 groupmod -g 1500 500
 

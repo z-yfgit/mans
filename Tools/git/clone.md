@@ -1,25 +1,35 @@
 ## git clone命令
-说明：将存储库克隆到新建的目录中。
+说明：克隆仓库到一个新的目录
 
 为已克隆存储库中的每个分支创建远程跟踪分支(使用`git branch --remotes`可见)，并创建并签出从已克隆存储库的当前活动分支派生的初始分支。
 
 ### 用法
 
 ```
-git clone [options] [--] <repo> [<dir>]
+git clone [--template=<template_directory>]
+                 [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
+                 [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]
+                 [--dissociate] [--separate-git-dir <git dir>]
+                 [--depth <depth>] [--[no-]single-branch] [--no-tags]
+                 [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]
+                 [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]
+                 [--filter=<filter>] [--] <repository>
+                 [<directory>]
 
-<repo>   # 远程仓库，仓库地址有ssh、https两种
-[<dir>]   # 可选参数，可以指定clone到哪个目录
+<repository>
+    远程仓库URL地址
+
+[<directory>]
+    指定一个空目录为克隆位置，默认克隆到当前目录
 ```
 
-| 选项 | 说明   |
-| ---- | ------------|
-| -v   | 更详细的输出     |
-| -q   | 更安静的输出     |
-| -l   | 从本地存储库克隆 |
-| -n   |                  |
-| -s   | 设置为共享存储库 |
-| -o   |                  |
+| 选项 | 说明
+| ---- | ---
+| -v   | 更详细的输出
+| -q   | 更安静的输出
+| -b   | 克隆指定分支
+| -l   | 从本地存储库克隆
+| -s   | 设置为共享存储库
 
 ### 示例
 
@@ -28,8 +38,8 @@ git clone [options] [--] <repo> [<dir>]
 git clone https://github.com/engild/mans.git
 
 # 克隆指定分支
-git clone -b 分支名 仓库地址
+git clone -b branch_name https://github.com/engild/mans.git
 
-# 克隆ssh仓库，指定ssh密钥。id_rsa2是用户目录下的ssh私钥而不是公钥
+# 使用指定ssh私钥文件克隆仓库
 git clone git@github.com:xxx/yyy.git --config core.sshcommand="ssh -i ~/.ssh/id_rsa2"
 ```

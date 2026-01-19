@@ -51,6 +51,10 @@ echo "hello_world" | grep -w hello   # 失败
 
 # 仅输出正则匹配部分
 echo "banana 88" | grep -oP 'banana \K\d+'   # 结果为88
+# 这里\K的作用是重置匹配位置，仅保留\K右侧匹配到的内容作为输出
+
+# 使用\K和正向预查，取中间部分
+echo "banana 889 yes" | grep -oP 'banana \K\d{2}(?=9 yes)'   # 结果为88
 
 # 过滤数字
 grep '[0-9]' filename.txt
