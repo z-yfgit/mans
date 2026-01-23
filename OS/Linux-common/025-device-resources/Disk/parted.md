@@ -1,1 +1,1 @@
-parted命令
+## parted命令

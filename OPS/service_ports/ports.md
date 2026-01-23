@@ -19,11 +19,16 @@
 | 2379          | etcd
 | 2380          | etcd
 | 3000          | grafana
-| 3306          | mysql
-| 3389          | rdp
+| 3306          | mysql数据库
+| 3389          | windows远程桌面（rdp）
 | 5601          | kibana
 | 6379          | redis
-| 8080          | tomcat 8005(关闭指令端口)
+| 8080          | tomcat。 8005(关闭指令端口)
+| 8123          | clickhouse，HTTP API端口
+| 9000          | clickhouse，原生协议交互端口
+| 9004          | clickhouse，兼容MySQL协议端口
+| 9005          | clickhouse，兼容PostgreSQL协议端口
+| 9009          | clickhouse，与副本间的端口，用于数据交换
 | 9090          | prometheus
 | 9092          | kafka
 | 9100          | elasticsearch head

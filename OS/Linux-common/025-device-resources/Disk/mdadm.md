@@ -1,4 +1,4 @@
-mdadm命令
+## mdadm命令
 mdadm --detail /dev/md0
 mdadm -D /dev/md0
 

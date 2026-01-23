@@ -9,7 +9,7 @@ server = "https://github.com"
 author = "engild"
 repo = "mans"
 repo_url = f"{server}/{author}/{repo}/"
-ignore_files = ["branch", "README.md", "translate.json", "command-example.md", os.path.basename(__file__)]
+ignore_files = [".gitignore", "branch", "README.md", "translate.json", "command-example.md", os.path.basename(__file__)]
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
 with open(script_directory + '/branch', 'r') as file:
@@ -18,7 +18,7 @@ with open(script_directory + '/branch', 'r') as file:
 def is_done_command(file):   # done
     # 判断命令是否已整理完成
     command_name, description = False, False
-    title_re = "^## (.*)命令&$"
+    title_re = "^## (.*)(命令|语句)&$"
     describe_re = "^说明[:：] ?(.*)"
     
     with open(file, "r") as f:

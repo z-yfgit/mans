@@ -1,5 +1,5 @@
 ## git checkout命令
-说明：
+说明：切换分支或恢复工作目录文件
 
 ### 用法
 ```
@@ -15,9 +15,9 @@ git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>...]
 ### 示例
 
 ```sh
-# 从upstream/master更新一个路径
+# 从upstream/master恢复main.yml文件
 git checkout upstream/master --  main.yml
 
-# 从索引区更新一路径
+# 从索引区恢复debug.yml文件
 git checkout -- debug.yml
 ```

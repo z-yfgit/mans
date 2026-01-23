@@ -1,0 +1,33 @@
+配置文件路径：/etc/ssh/sshd_Config
+
+
+# 配置说明：监听端口
+Port 22
+
+# 配置说明：允许root登录
+#   prohibit-password   禁止密码验证，仅允许密钥验证
+#   yes                 允许root登录
+#   no                  禁止root登录
+PermitRootLogin no
+
+
+# 配置说明：密钥验证
+#   yes                 允许使用密钥验证
+#   no                  禁止使用密钥验证
+PubkeyAuthentication yes
+
+
+# 配置说明：密码验证
+#   yes                 允许使用密码验证
+#   no                  禁止使用密码验证
+PasswordAuthentication no
+
+
+# 配置说明：授权密钥文件路径
+AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2
+
+
+# 配置说明：是否使用DNS解析客户端主机名
+#   yes                 允许使用DNS解析客户端主机名
+#   no                  禁止使用DNS解析客户端主机名
+UseDNS no
