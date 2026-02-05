@@ -1,0 +1,6 @@
+- [cat —— 连接文件并在标准输出上打印](https://github.com/engild/mans/blob/master/OS/Linux-common/015-text/cat.md)
+- [echo —— 输出字符串到标准输出](https://github.com/engild/mans/blob/master/OS/Linux-common/015-text/echo.md)
+- [head —— 显示文件的开头部分](https://github.com/engild/mans/blob/master/OS/Linux-common/015-text/head.md)
+- [more —— 逐屏浏览文件的工具](https://github.com/engild/mans/blob/master/OS/Linux-common/015-text/more.md)
+- [tac —— 将文件的内容反转打印到标准输出](https://github.com/engild/mans/blob/master/OS/Linux-common/015-text/tac.md)
+- [tail —— 显示文件的末尾内容](https://github.com/engild/mans/blob/master/OS/Linux-common/015-text/tail.md)

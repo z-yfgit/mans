@@ -1,0 +1,2 @@
+- [iotop —— 显示进程的IO使用情况](https://github.com/engild/mans/blob/master/OS/Linux-common/080-process/iotop.md)
+- [pwdx —— 显示进程的当前工作目录](https://github.com/engild/mans/blob/master/OS/Linux-common/080-process/pwdx.md)

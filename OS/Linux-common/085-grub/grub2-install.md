@@ -1,1 +1,1 @@
-# grub2-install命令
+## grub2-install命令

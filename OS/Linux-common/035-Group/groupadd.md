@@ -2,7 +2,6 @@
 说明：添加新用户组
 
 ### 用法
-
 ```
 groupadd [options] GROUP
 ```

@@ -5,8 +5,8 @@
 ```
 groupdel [options] GROUP
 ```
-### 示例
 
+### 示例
 ```sh
 # 删除名为test_group的组
 groupdel test_group

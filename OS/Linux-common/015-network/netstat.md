@@ -25,7 +25,10 @@ address_family_options:
  [-4|--inet]  [-6|--inet6]  [--protocol={inet,inet6,unix,ipx,ax25,netrom,ddp,  ...  }  ]  [--unix|-x]  [--inet|--ip|--tcpip] [--ax25] [--x25] [--rose] [--ash]    [--ipx] [--netrom] [--ddp|--appletalk] [--econet|--ec]
 
 ### 选项
-
+| 选项 | 说明
+| --- | ---
+| -4    | 显示IPv4协议的套接字
+| -6    | 显示IPv6协议的套接字
 -a  显示所有状态的套接字。使用—interfaces或-i选项，显示未启动的接口
 
 -n  显示数字地址，而不是试图确定符号主机、端口或用户名

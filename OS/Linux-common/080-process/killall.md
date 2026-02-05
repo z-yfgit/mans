@@ -1,1 +1,1 @@
-killall命令
+##killall命令

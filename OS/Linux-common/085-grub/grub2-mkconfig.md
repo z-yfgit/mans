@@ -1,4 +1,4 @@
-# grub2-mkconfig命令
+## grub2-mkconfig命令
 
 ```sh
 grub2-mkconfig -o /boot/grub2/grub.cfg   # BIOS（leagcy）引导

@@ -1,4 +1,5 @@
 ## arping命令
+说明：
 
 ### 用法
 ```
@@ -12,7 +13,7 @@ Usage: arping [-fqbDUAV] [-c count] [-w timeout] [-I device] [-s source] destina
 |           |                    |
 
 ### 示例
-~~~shell
+```sh
 # 使用eth0网卡，对10.127.100.248发···
 arping -I eth0 10.127.100.248
-~~~
+```

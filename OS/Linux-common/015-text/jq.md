@@ -1,11 +1,11 @@
 ## jq命令
-这里写命令的简单说明
+说明：命令行JSON处理器
 
 ### 用法
 ```
 jq [options] <jq filter> [file...]
-        jq [options] --args <jq filter> [strings...]
-        jq [options] --jsonargs <jq filter> [JSON_TEXTS...]
+jq [options] --args <jq filter> [strings...]
+jq [options] --jsonargs <jq filter> [JSON_TEXTS...]
 ```
 
 | 选项 | 说明
@@ -49,6 +49,4 @@ jq '.key1 + "\t" + (.key2 | tostring)'
 
 # 设置默认值
 jq '."value" // 0 as $value | "The value is: " + ($value | tostring)' input.json
-
-
 ```

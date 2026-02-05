@@ -13,7 +13,6 @@ groupmod [options] GROUP
 | -o, --non-unique              | 允许使用重复的 GID
 
 ### 示例
-
 ```sh
 # 将组ID为500的修改成组ID为1500
 groupmod -g 1500 500

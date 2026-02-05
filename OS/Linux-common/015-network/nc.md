@@ -1,25 +1,25 @@
 ## nc命令
-连接或监听任意TCP或者UDP
+说明：连接或监听任意TCP或者UDP
 
 ### 用法
-```shell
+```
 nc [-46CDdFhklNnrStUuvZz] [-I length] [-i interval] [-M ttl]
 	  [-m minttl] [-O length] [-P proxy_username] [-p source_port]
 	  [-q seconds] [-s source] [-T keyword] [-V rtable] [-W recvlimit] [-w timeout]
-	  [-X proxy_protocol] [-x proxy_address[:port]] 	  [destination] [port]
+	  [-X proxy_protocol] [-x proxy_address[:port]] [destination] [port]
 ```
 
-| 选项 | 说明 |
-| --- | --- |
-| -v | 产生更详细的输出 |
-| -z | 只扫描侦听守护进程，不向它们发送任何数据，不能与-l选项一起使用。 |
-| -l \<PORT>| 监听传入的连接，而不是启动到远程主机的连接。侦听的目标和端口可以指定为非可选参数，也可以分别使用选项-s和-p。不能与-x或-z一起使用。此外，使用-w选项指定的任何超时都会被忽略 |
-| -w\<S> | 设置连接超时时间，单位是秒。默认没有超时时间 |
-| -N | 发送数据 |
-| -u | 使用UDP协议，默认使用TCP协议 |
+| 选项 | 说明
+| --- | ---
+| -v 		| 产生更详细的输出
+| -z 		| 只扫描侦听守护进程，不向它们发送任何数据，不能与-l选项一起使用。
+| -l \<PORT>| 监听传入的连接，而不是启动到远程主机的连接。听的目标和端口可以指定为非可选参数，也可以分别使用选项-s和-p。不能与-x或-z一起使用。此外，使用-w选项指定的超时会被忽略
+| -w\<S> 	| 设置连接超时时间，单位是秒。默认没有超时时间
+| -N 		| 发送数据
+| -u 		| 使用UDP协议（默认TCP协议）
 
 ### 示例
-```shell
+```sh
 # 测试到192.168.10.20的3306端口连通性
 nc -zv 192.168.10.20 3306
 
@@ -37,9 +37,8 @@ nc -l 1280 > nc.out					# 接收方执行
 nc 172.16.160.20 8001 < nc.in 		# 发送方执行
 
 # 传输目录
-nc -l 8001 | tar xfvz -                                                      ----接收者执行
-
-tar cfz - * | nc 172.16.160.20 8001
+nc -l 8001 | tar xfvz -					# 接收方执行
+tar cfz - * | nc 172.16.160.20 8001 	# 发送方执行
 
 # 扫描tcp协议80到90端口,并设置超时时间为2秒
 nc -zv -w2 192.168.10.20 80-90
