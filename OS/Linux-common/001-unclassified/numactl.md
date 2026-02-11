@@ -20,14 +20,10 @@ memory policy is --interleave | -i, --preferred | -p, --membind | -m, --localall
 
 | 选项 | 说明 |
 | --- | --- |
-|  |  |
-| --hardware, -H | 显示系统上可用节点的资源清单 |
-|  |  |
+| -H    | 显示系统上可用节点的资源清单 |
 
 ### 示例
 ```sh
 # 显示系统上可用节点的资源清单
 numactl -H
-
-
 ```

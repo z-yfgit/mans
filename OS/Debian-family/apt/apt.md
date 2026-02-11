@@ -1,17 +1,19 @@
 ## apt命令
 说明：Debian-family Linux系统的软件包管理工具
 
+### 用法
+```
+apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture] 
+        {list | search | show | update | install pkg [{=pkg_version_number | /target_release}]... 
+        | remove pkg...  | upgrade | full-upgrade | edit-sources | {-v | --version} | {-h | --help}}
+```
+
 ### 示例
 
-```shell
+```sh
 # 更新可用软件包列表
 apt update
 
-# 列出所有已安装的包
-apt list --installed
-
-# 安装一个或多个包
-apt install ncat iftop
 
 # 重新安装包
 apt reinstall nginx
@@ -19,14 +21,10 @@ apt reinstall nginx
 # 升级指定的包
 apt install --only-upgrade policykit-1
 
-# 移除包
-apt remove mysql
-
 # 卸载所有自动安装且不再使用的软件包
 apt autoremove
 
-# 查一个命令应该装哪个包
-apt search proxychains
+
 ```
 
 

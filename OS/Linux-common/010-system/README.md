@@ -1,1 +1,3 @@
-- [hostnamectl —— 查询或修改系统主机名。](https://github.com/engild/mans/blob/master/OS/Linux-common/010-system/hostnamectl.md)
+- [hostnamectl —— 查询或修改系统主机名](https://github.com/engild/mans/blob/master/OS/Linux-common/010-system/hostnamectl.md)
+- [journalctl —— 查询由systemd服务记录的日志](https://github.com/engild/mans/blob/master/OS/Linux-common/010-system/journalctl.md)
+- [systemctl —— 向系统管理器查询或发送控制命令](https://github.com/engild/mans/blob/master/OS/Linux-common/010-system/systemctl.md)

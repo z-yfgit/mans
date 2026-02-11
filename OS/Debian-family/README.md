@@ -1,0 +1,3 @@
+### [apt](https://github.com/engild/mans/tree/master/OS/Debian-family/apt)
+- [apt list —— 列出安装包](https://github.com/engild/mans/blob/master/OS/Debian-family/apt/list.md)
+- [apt search —— 通过正则表达式在可用软件包列表中搜索匹配的包](https://github.com/engild/mans/blob/master/OS/Debian-family/apt/search.md)

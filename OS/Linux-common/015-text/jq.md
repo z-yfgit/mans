@@ -14,6 +14,18 @@ jq [options] --jsonargs <jq filter> [JSON_TEXTS...]
 |  | 
 |  | 
 
+### 函数
+| 函数 | 说明
+| --- | ---
+| to_entries    | 将JSON对象转换为键值对数组
+| sort_by       | 对数组进行排序
+| from_entries  | 将键值对数组转换为JSON对象
+| tonumber      | 将字符串转换为数字
+| select        | 过滤数组或对象，根据条件选择元素
+| has           | 判断对象是否有指定的key
+| contains      | 判断字符串是否包含指定的子字符串
+
+
 ### 示例
 ```sh
 # 取json文本中key为id的值
@@ -49,4 +61,15 @@ jq '.key1 + "\t" + (.key2 | tostring)'
 
 # 设置默认值
 jq '."value" // 0 as $value | "The value is: " + ($value | tostring)' input.json
+
+# 对key进行排序（无法准确排序数字）
+jq 'to_entries | sort_by(.key) | from_entries' << EOF
+{
+  "332": "71778200 78106400 87167200 ",
+  "1849": "70634600 99955000 87040000 84580600 90491400 96246200 ",
+  "608": "85843200 71403600 ",
+  "012": "77101800 78671200 98800400 76977000 75716800 ",
+  "1200": "91112600 89516200 85014800 78593400 "
+}
+EOF
 ```

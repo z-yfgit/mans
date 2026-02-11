@@ -1,0 +1,2 @@
+- [date —— 打印或设置系统日志和时间](https://github.com/engild/mans/blob/master/OS/Linux-common/013-datetime/date.md)
+- [timedatectl —— 查询或更改系统的时间和日期](https://github.com/engild/mans/blob/master/OS/Linux-common/013-datetime/timedatectl.md)

@@ -1,1 +1,3 @@
+- [sleep —— 延迟指定的时间](https://github.com/engild/mans/blob/master/OS/Linux-common/001-unclassified/sleep.md)
+- [timeout —— 运行一个命令, 并在指定时间后终止它](https://github.com/engild/mans/blob/master/OS/Linux-common/001-unclassified/timeout.md)
 - [uptime —— 查询系统运行时间、登录用户数、负载情况](https://github.com/engild/mans/blob/master/OS/Linux-common/001-unclassified/uptime.md)

@@ -1,1 +1,1 @@
-lsb_release命令
+## lsb_release命令

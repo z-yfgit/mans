@@ -46,7 +46,7 @@ sed "s/^/#/"
 sed '/keyword/d' testfile
 
 # 带备份，备份文件的后缀是   .bak_`date +%F_%T`
-sed -ri.bak_`date +%F_%T` 's@MTU=1500@MTU=2000@g' /etc/sysconfig/network-scripts/ifcfg-xgbe1
+sed -ri.bak_`date +%F_%T` 's@MTU=1500@MTU=2000@g' /etc/sysconfig/network-scripts/ifcfg-eth0
 
 # 将整行中的所有keywordB替换成keywordC，只替换包含keywordA的，只打印匹配的行
 sed -n '/keywordA/s/keywordB/keywordC/gp' example.txt
