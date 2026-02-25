@@ -1,0 +1,1 @@
+## classmethod装饰器

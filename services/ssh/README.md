@@ -1,0 +1,1 @@
+- [ssh-copy-id —— 将本地公钥复制到远程主机的authorized_keys文件中](https://github.com/engild/mans/blob/master/Services/ssh/ssh-copy-id.md)

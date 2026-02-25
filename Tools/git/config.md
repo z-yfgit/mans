@@ -68,7 +68,7 @@ git config --remove-section sec_name
 | user.name         | 用户名
 | user.email        | 用户邮箱
 | core.editor       | 编辑器
-| core.sshCommand   | 
+| core.sshCommand   | 连接远程仓库时使用的SSH命令
 | author.name       | 作者名
 | author.email      | 作者邮箱
 | committer.name    | 提交人名

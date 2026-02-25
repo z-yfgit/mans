@@ -8,10 +8,10 @@ CREATE DATABASE 和 CREATE SCHEMA 是等价的。
 CREATE DATABASE [IF NOT EXISTS] db_name [create_option] ...
 ```
 
-| 选项 | 说明
+| 创建选项 | 说明
 | --- | ---
-| CHARACTER SET charset_name    | 数据库默认字符集，默认utf8mb4
-| COLLATE collation_name        | 数据库默认字符集排序规则，默认utf8mb4_unicode_ci
+| CHARACTER SET charset_name    | 指定数据库默认字符集，默认utf8mb4
+| COLLATE collation_name        | 指定数据库默认字符集排序规则，默认utf8mb4_unicode_ci
 | ENCRYPTION { 'Y' | 'N' }      | 是否加密数据库，默认N
 
 ENCRYPTION

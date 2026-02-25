@@ -1,16 +1,16 @@
 ### [操作系统相关命令](https://github.com/engild/mans/tree/master/OS)
 
-### [服务相关命令](https://github.com/engild/mans/tree/master/services)
+### [服务相关](https://github.com/engild/mans/tree/master/services)
 
-### [开发语言相关命令](https://github.com/engild/mans/tree/master/Language)
+### [开发语言相关](https://github.com/engild/mans/tree/master/Language)
 
-### [工具型相关命令](https://github.com/engild/mans/tree/master/Tools)
+### [工具相关](https://github.com/engild/mans/tree/master/Tools)
 
-### [数据库相关命令](https://github.com/engild/mans/tree/master/Database)
+### [数据库相关](https://github.com/engild/mans/tree/master/Database)
 
 ### [运维操作相关](https://github.com/engild/mans/tree/master/OPS)
 
-### [其他命令](https://github.com/engild/mans/tree/master/Other)
+### [其他](https://github.com/engild/mans/tree/master/Other)
 
 
 

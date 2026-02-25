@@ -1,0 +1,5 @@
+### [SQL](https://github.com/engild/mans/tree/master/Database/关系型数据库/mysql/SQL)
+- [CREATE DATABASE —— 创建数据库](https://github.com/engild/mans/blob/master/Database/关系型数据库/mysql/SQL/CREATE_DATABASE.md)
+- [DROP TABLE —— 删除一个或多个数据表](https://github.com/engild/mans/blob/master/Database/关系型数据库/mysql/SQL/DROP_TABLE.md)
+### [commands](https://github.com/engild/mans/tree/master/Database/关系型数据库/mysql/commands)
+- [mysqldumpslow —— MySQL提供的一个用于分析慢查询日志文件的工具](https://github.com/engild/mans/blob/master/Database/关系型数据库/mysql/commands/mysqldumpslow.md)

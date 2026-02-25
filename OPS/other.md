@@ -6,29 +6,23 @@ lspci -s 65:00.0 -v |grep -i slot
 ```
 
 ## 将命令输出结果丢弃
+```sh
 ls >/dev/null 2>&1
+```
 
 ## 单引号中使用变量
+```sh
 echo 'hello "'${var_name}'"'
+```
 
-## shell设置默认变量
-name=${name:-"default value"}
-name=${name:="default value"}
-
-
-
-## 单引号中调用变量
-for i in `cat host`; do curl -s IP/InstanceService -d '{"value1": true, "read_deleted": true, "host": "'${i}'"}' ; done
-
-
-##  创建多个文件
+## 一次创建多个有规律的文件
 ```sh
 touch file{1..5}.txt
 ls
 # file1.txt  file2.txt  file3.txt  file4.txt  file5.txt
 ```
 
-## 快速备份
+## 快速给文件添加后缀
 ```sh
 cp file{,.bak}
 ls

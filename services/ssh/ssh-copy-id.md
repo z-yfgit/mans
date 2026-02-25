@@ -19,4 +19,3 @@
 # 将本地公钥复制到远程主机
 ssh-copy-id -i ~/.ssh/id_rsa.pub -p 2222 user@192.168.1.100
 ```
-

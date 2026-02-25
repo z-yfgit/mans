@@ -4,4 +4,6 @@
 - [method —— ](https://github.com/engild/mans/tree/master/Language/python3/method)
 - [module —— ](https://github.com/engild/mans/tree/master/Language/python3/module)
 - [pip —— ](https://github.com/engild/mans/tree/master/Language/python3/pip)
+- [装饰器 —— ](https://github.com/engild/mans/tree/master/Language/python3/装饰器)
 ### [shell](https://github.com/engild/mans/tree/master/Language/shell)
+- [脚本示例](https://github.com/engild/mans/tree/master/Language/shell/脚本示例)

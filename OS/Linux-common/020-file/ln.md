@@ -1,12 +1,13 @@
 ## ln命令
-这里写命令的简单说明
+说明：创建文件链接
 
 ### 用法
 ```
-Usage: ln [OPTION]... [-T] TARGET LINK_NAME
-  or:  ln [OPTION]... TARGET
-  or:  ln [OPTION]... TARGET... DIRECTORY
-  or:  ln [OPTION]... -t DIRECTORY TARGET...
+ln [OPTION]... [-T] TARGET LINK_NAME
+ln [OPTION]... TARGET
+ln [OPTION]... TARGET... DIRECTORY
+ln [OPTION]... -t DIRECTORY TARGET...
+
 In the 1st form, create a link to TARGET with the name LINK_NAME.
 In the 2nd form, create a link to TARGET in the current directory.
 In the 3rd and 4th forms, create links to each TARGET in DIRECTORY.
@@ -25,7 +26,8 @@ interpreted in relation to its parent directory.
 
 ### 示例
 ```sh
-# 创建软链接文件/home/yufei，链接位置是目录/home/nvme1n1/yufei/
-ln -s /home/nvme1n1/yufei/ /home/yufei
+# 创建软链接/home/data_dir，目标是/data/data_dir
+mkdir /data/data_dir/
+ln -s /data/data_dir/ /home/data_dir
 
 ```

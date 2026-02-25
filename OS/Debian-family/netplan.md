@@ -20,4 +20,6 @@ network:
   version: 2
 ```
 
+```sh
 netplan apply
+```

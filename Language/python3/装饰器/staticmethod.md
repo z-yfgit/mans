@@ -1,0 +1,1 @@
+## staticmethod装饰器

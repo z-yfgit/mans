@@ -1,4 +1,4 @@
-## time.sleep模块&
+## time.sleep函数&
 # 说明：暂停指定的秒数
 
 """

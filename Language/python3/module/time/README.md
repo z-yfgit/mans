@@ -1,1 +1,2 @@
-- [time.time —— 返回当前时间的时间戳](https://github.com/engild/mans/blob/master/Language/python3/module/time/time.py)
+- [time.sleep —— 暂停指定的秒数](https://github.com/engild/mans/blob/master/Language/python3/module/time/sleep.py)
+- [time.time —— 返回当前时间的时间戳](https://github.com/engild/mans/blob/master/Language/python3/module/time/time_demo.py)
