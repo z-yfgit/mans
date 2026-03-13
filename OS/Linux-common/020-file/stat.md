@@ -34,14 +34,14 @@ stat [OPTION]... FILE...
 | %T    | minor device type in hex, for character/block device special files
 | %u    | 文件所有者ID
 | %U    | 文件所有者
-| %w    | time of file birth, human-readable; - if unknown
-| %W    | time of file birth, seconds since Epoch; 0 if unknown
-| %x    | time of last access, human-readable
-| %X    | time of last access, seconds since Epoch
-| %y    | time of last data modification, human-readable
-| %Y    | time of last data modification, seconds since Epoch
-| %z    | time of last status change, human-readable
-| %Z    | time of last status change, seconds since Epoch
+| %w    | 文件创建时间，人类可读格式；如果未知则为-
+| %W    | 文件创建时间，秒数自Epoch开始；如果未知则为0
+| %x    | 最后访问时间，人类可读格式
+| %X    | 最后访问时间，秒数自Epoch开始
+| %y    | 最后数据修改时间，人类可读格式
+| %Y    | 最后数据修改时间，秒数自Epoch开始
+| %z    | 最后状态改变时间，人类可读格式
+| %Z    | 文件状态最后改变时间，秒数自Epoch开始
 
 | 文件系统格式化 | 说明
 | --- | ---

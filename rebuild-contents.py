@@ -11,6 +11,7 @@ repo = "mans"
 repo_url = f"{server}/{author}/{repo}/"
 ignore_files = [".gitignore", "branch", "README.md", "translate.json", "command-example.md", os.path.basename(__file__)]
 
+# 脚本所在目录
 script_directory = os.path.dirname(os.path.abspath(__file__))
 with open(script_directory + '/branch', 'r') as file:
     branch = file.read()
@@ -18,10 +19,9 @@ with open(script_directory + '/branch', 'r') as file:
 def is_done_command(file):   # done
     # 判断命令是否已整理完成
     command_name, description = False, False
-    title_re = "^## (.*)(命令|语句)&$"
-    describe_re = "^说明[:：] ?(.*)"
-    
-    with open(file, "r") as f:
+    title_re = "^## (.*)(命令|语句|函数)&$"
+    describe_re = "^[# ]*说明[:：] ?(.*)"
+    with open(file, "r", encoding="utf-8") as f:
         content = f.readlines()
     
     if len(content) >= 2:
@@ -30,17 +30,17 @@ def is_done_command(file):   # done
     else:
         return False
 
-    # 如果命令已整理完成，提取命令
+    # 提取命令
     title_match = re.search(title_re, title)
     if title_match:
         command_name = title_match.group(1)
         
-    # 如果已写说明，提取说明
+    # 提取说明
     description_match = re.search(describe_re, describe)
     if description_match:
         description = description_match.group(1)
     
-    # 如果命令已整理完成，返回命令和说明
+    # 如果命令和说明都符合预期，返回命令和说明
     if command_name and description:
         return command_name, description
     else:
@@ -54,7 +54,7 @@ def gen_link(file):   # done
     elif os.path.isdir(file):
         t = "tree/"
     else:
-        print("This is neither a file nor a directory.")
+        print(f"{file} is not a file or directory.")
         return None
     
     link = repo_url + t + branch + new_path
@@ -62,6 +62,10 @@ def gen_link(file):   # done
     return link
 
 def get_translate(translate_file):   # done
+    """
+    :param translate_file: 翻译文件路径
+    :return: 翻译字典
+    """
     try:
         with open(translate_file, "r", encoding="utf-8") as file:
             data = json.load(file)
@@ -85,7 +89,7 @@ def get_all(path):   # done
 
 def write_readme(content, file):   # done
     if content:
-        with open(file, "w") as f:
+        with open(file, "w", encoding="utf-8") as f:
             for item in content:
                 f.write(f"{item}\n")
 
@@ -157,7 +161,10 @@ def process_c(root, dir):   # done
  
 
 def main():
+    # 获取脚本所在目录下的所有目录和文件
     script_root, script_dir, script_file = get_all(script_directory)
+
+    # 遍历所有目录处理
     for dir in script_dir:
         process_c(script_root, dir)
 

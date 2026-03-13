@@ -1,1 +1,1 @@
-lscpu命令
+## lscpu命令

@@ -55,23 +55,41 @@ awk -v FS='time' '{print $2}'
 ```
 
 ### 筛选打印
+| 条件符 | 说明 |
+| --- | ---
+| ~     | 包含
+| !~    | 不包含
+| ==    | 等于
+| !=    | 不等于
+| >     | 大于
+| >=    | 大于等于
+| <     | 小于
+| <=    | 小于等于
+| &&    | 逻辑与
+| \|\|  | 逻辑或
+
 ```sh
-# 打印第2列，且第5列包含keywork的行
-awk '$5~"keywork"{ print $2 }'
+# 打印第2列，且第5列包含keyword的行
+awk '$5 ~ "keyword"{ print $2 }'
 
-# 打印第2列，且第5列不包含keywork的行
-awk '$5!~"keywork"{ print $2 }'
+# 打印第2列，且第5列不包含keyword的行
+awk '$5 !~ "keyword"{ print $2 }'
 
-# 打印第2列，且第5列等于keywork的行
-awk '$5=="keywork"{ print $2 }'
+# 打印第2列，且第5列等于keyword的行
+awk '$5 == "keyword"{ print $2 }'
 
-# 打印第2列，且第5列不等于keywork的行
-awk '$5!="keywork"{ print $2 }'
+# 打印第2列，且第5列不等于keyword的行
+awk '$5 != "keyword"{ print $2 }'
 
 # 过滤某一列的数字大于10的行
-awk -F ':'  '$2>100{print $0}'
-```
+awk '$2 > 100{print $0}'
 
+# 打印第1列，且第7列不包含nologin、false、sync的行。筛选出可登录的用户
+awk -F: '$7 !~ "nologin|false|sync" {print $1}' /etc/passwd
+
+# 打印第3列，且第1列等于keyword，第2列等于keyword2的行
+awk '$1 == "keyword" && $2 == "keyword2" {print $3}'
+```
 
 ### 其他示例
 ```sh
@@ -85,11 +103,29 @@ awk '{print $(NF-1)}'
 export VAR_NAME=aa ; echo | awk -v VAR="$VAR_NAME" '{print VAR}'
 echo | awk -v VAR=$(echo 123) '{print VAR}'
 
-# awk执行系统命令，注意双引号的位置！
-awk '{system("echo "$1" "$2"; echo "$3" "$4)}'
-
 # 下面是一个批量修改镜像的标签，并推送到指定镜像仓库的自动化脚本示例
 export SRC_REPO=example.com/reponame/
 export DEST_REPO=1.2.3.4:5000/reponame/
 docker images | grep "$SRC_REPO" | tr / ' ' | awk '{system("echo docker tag "$5" ${DEST_REPO}"$3":"$4" ;echo docker push ${DEST_REPO}"$3":"$4)}'
 ```
+
+
+### awk内置函数
+
+#### print函数
+#### printf函数
+格式化打印
+```sh
+# 格式化打印
+awk '{printf "%s=%s %s\n", $1, $3, $5}' <<< "ab 123 cd 456 ef 789"
+```
+
+#### system函数
+执行系统命令
+```sh
+# awk执行系统命令，注意双引号的位置！
+awk '{system("echo "$1" "$2"; echo "$3" "$4)}'
+```
+#### mktime
+
+

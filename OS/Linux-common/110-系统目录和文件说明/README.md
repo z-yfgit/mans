@@ -1,0 +1,5 @@
+### [etc](https://github.com/engild/mans/tree/master/OS/Linux-common/110-系统目录和文件说明/etc)
+- [security](https://github.com/engild/mans/tree/master/OS/Linux-common/110-系统目录和文件说明/etc/security)
+### [proc](https://github.com/engild/mans/tree/master/OS/Linux-common/110-系统目录和文件说明/proc)
+- [PID](https://github.com/engild/mans/tree/master/OS/Linux-common/110-系统目录和文件说明/proc/PID)
+- [sys](https://github.com/engild/mans/tree/master/OS/Linux-common/110-系统目录和文件说明/proc/sys)

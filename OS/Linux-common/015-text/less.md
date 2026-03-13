@@ -4,10 +4,6 @@
 
 ### 用法
 ```
-less -?
-less --help
-less -V
-less --version
 less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
      [-b space] [-h lines] [-j line] [-k keyfile]
      [-{oO} logfile] [-p pattern] [-P prompt] [-t tag]
@@ -21,9 +17,11 @@ less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
 | -N | 显示行号
 | -S | 不换行显示
 | +G | 打开时直接跳转到文件末尾
+| -V | 显示版本信息
+| -? | 显示帮助信息
 
 
-### 常用按键
+### 交互模式按键
 | 按键 | 说明
 | --- | ---
 | q  :q  Q  :Q  ZZ  | 退出less
@@ -42,7 +40,8 @@ less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
 | 10                | 往下滚动10行
 | /pattern          | 搜索pattern字符串，从当前位置向下搜索
 | ?pattern          | 搜索pattern字符串，从当前位置向上搜索
-| &pattern          | 仅显示匹配的行
+| &pattern          | 搜索，仅显示匹配的行
+| &!pattern         | 搜索，仅显示不匹配的行
 | ESC-U             | 清除搜索高亮
 | g  <              | 跳转到文件开头
 | G  >              | 跳转到文件末尾
@@ -56,12 +55,12 @@ less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]
 | R                 | 重新加载当前文件
 
 
-### 交互模式用的用法
+### 交互模式用法示例
 ```sh
-# 仅显示匹配的行
+# 搜索，仅显示匹配的行
 &pattern
 
-# 仅显示不匹配的行
+# 搜索，仅显示不匹配的行
 &!pattern
 
 # 按m设置标记。将当前位置标记为a

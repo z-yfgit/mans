@@ -1,5 +1,8 @@
 ### [IPMI —— 智能平台管理接口](https://github.com/engild/mans/tree/master/Tools/IPMI)
 ### [ansible —— 自动化运维工具](https://github.com/engild/mans/tree/master/Tools/ansible)
+- [all](https://github.com/engild/mans/tree/master/Tools/ansible/all)
+- [commands](https://github.com/engild/mans/tree/master/Tools/ansible/commands)
+- [module](https://github.com/engild/mans/tree/master/Tools/ansible/module)
 ### [git —— 分布式版本控制系统](https://github.com/engild/mans/tree/master/Tools/git)
 ### [helm —— Kubernetes包管理器](https://github.com/engild/mans/tree/master/Tools/helm)
 - [helm](https://github.com/engild/mans/tree/master/Tools/helm/helm)

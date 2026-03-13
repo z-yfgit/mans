@@ -1,0 +1,33 @@
+su root root
+/tmp/observer.log {
+    size 250M
+    copytruncate
+    nocreate
+    nomail
+    nocompress
+    rotate 7
+    missingok
+    notifempty
+    
+    postrotate
+        LOG_FILE="/tmp/observer.log"
+        ARCHIVE_LOG="${LOG_FILE}.$(date +%Y%m%d%H%M%S%3N)"
+        
+        if [ -f "${LOG_FILE}.1" ]; then
+            mv "${LOG_FILE}.1" "${ARCHIVE_LOG}"
+        fi
+    endscript
+}
+
+# 配置项说明
+# size 250M       # 文件大小超过 250M 时轮转
+# rotate 7        # 最多保留7个备份
+# copytruncate    # 复制并截断原始日志文件
+# nocreate        # 不创建新的日志文件
+# nomail          # 不发送邮件通知
+# nocompress      # 不压缩备份文件
+# missingok       # 忽略缺失的日志文件
+# notifempty      # 不轮转空文件
+
+crontab -e
+# * * * * * /usr/sbin/logrotate -f /etc/logrotate.d/xxx

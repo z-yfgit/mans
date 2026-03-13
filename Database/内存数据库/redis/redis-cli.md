@@ -10,6 +10,7 @@ redis-cli [OPTIONS] [cmd [arg [arg ...]]]
 | --- | ---
 | --scan        | 使用SCAN命令列出所有keys
 | --pattern     | 指定扫描模式，与--scan一起使用
+| -a password   | 连接时使用的密码
 
 
 

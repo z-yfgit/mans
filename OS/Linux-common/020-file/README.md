@@ -1,1 +1,3 @@
+- [basename —— 删除路径前面的目录部分](https://github.com/engild/mans/blob/master/OS/Linux-common/020-file/basename.md)
 - [cp —— 复制文件和目录](https://github.com/engild/mans/blob/master/OS/Linux-common/020-file/cp.md)
+- [ls —— 列出关于文件的信息](https://github.com/engild/mans/blob/master/OS/Linux-common/020-file/ls.md)
